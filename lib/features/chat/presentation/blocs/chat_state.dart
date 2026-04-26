@@ -1,15 +1,20 @@
+import 'package:equatable/equatable.dart';
+
 import '../../domain/entities/message.dart';
 
-class ChatState {
+class ChatState extends Equatable {
   final List<Message> messages;
 
-  ChatState({required this.messages});
+  const ChatState({required this.messages});
 
   factory ChatState.initial() {
-    return ChatState(messages: []);
+    return const ChatState(messages: []);
   }
 
   ChatState copyWith({List<Message>? messages}) {
     return ChatState(messages: messages ?? this.messages);
   }
+
+  @override
+  List<Object> get props => [messages];
 }
