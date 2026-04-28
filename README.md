@@ -138,6 +138,8 @@ flutter test
 ```
 
 ---
+## License
+MIT License
 
 ## 👤 Author
 
